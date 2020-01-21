@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <title>Arts Printers | Arts Computing Office</title>
+		<!--Link to JQuery Provider-->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js">
+		</script>
+		<!--Link to js file-->
+		<script type="text/javascript" src="ArtsPrintersFunctions.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="ArtsPrintersStyles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="https://uwaterloo.ca/favicon.ico" type="image/vnd.microsoft.icon">
+	</head>
+	<body>
+		<header id="header">
+			<div class="uw-section--inner">
+                <div id="uw-header" class="uw-header">
+                    <div id="uw-header-content" class="uw-header-content">
+                        <div id="uw-header-logo" class="uw-header-logo">
+                            <a id="uw-logo" class="uw-logo" href="https://uwaterloo.ca/" 
+                            target="_blank"> University of Waterloo</a>
+                        </div>
+                        <nav class="nav-university uw-header--nav__university" aria-label="University">
+        <ul class="global-menu">
+          <li><a href="https://uwaterloo.ca/admissions/" target="_blank">Admissions</a></li>
+          <li><a href="https://uwaterloo.ca/about/" target="_blank">About Waterloo</a></li>
+          <li><a href="https://uwaterloo.ca/faculties-academics/" target="_blank">Faculties &amp; academics</a></li>
+          <li><a href="https://uwaterloo.ca/offices-services/" target="_blank">Offices &amp; services</a></li>
+          <li><a href="https://uwaterloo.ca/support/" target="_blank">Support Waterloo</a></li>
+        </ul>
+      </nav>
+      <div id="uw-header-buttons" class="uw-header--buttons non_generic_header">
+      </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="site--offcanvas" class="uw-site--off-canvas non_generic_header">
+            <div class="uw-section--inner">
+                <div class="uw-site--cbar">
+                    <div class="uw-site--c1 uw-cbar"></div>
+                    <div class="uw-site--c2 uw-cbar"></div>
+                    <div class="uw-site--c3 uw-cbar"></div>
+                    <div class="uw-site--c4 uw-cbar"></div>
+                </div>
+            </div>
+        </div>
+        <div id="site-header" class="uw-site--header" role="region" aria-label="Site title">
+            <div class="uw-section--inner">
+                <a href="https://uwaterloo.ca/arts-computing/" title="Arts Computing Office" 
+                rel="home">Arts Computing Office</a>
+            </div>
+        </div>
+    <nav class="nav-university related-links">
+        <ul class="related-links">
+            <!--<li class="related-links-help-bar">Helpful Links</li>-->
+            <li><a href="https://uwaterloo.ca/arts-computing/help-and-support/printing-scanning-copying" target="_blank">
+                Printing, Scanning, Copying</a></li>
+            <li><a href="https://uwaterloo.ca/arts-computing/faculty-and-staff/using-your-xerox-copierworkcentre" target="_blank">
+                Department Printing</a></li>
+            <li><a href="https://chat.uwaterloo.ca/phplive.php?token=9e34a3aeb0bb744f42d388454cdb6103&1471455478"
+                target="_blank">Live Chat</a></li>
+            <li><a href="https://uwaterloo.ca/arts-computing/about/people"
+                target="_blank">Our People</a></li>
+            
+            <li><button id="install">Installation Help</button></li>
+            <!--Modal (Pop-up)-->
+            <div id="install--modal" class="modal">
+                <!--Modal (Pop-up Content)-->
+                <div class="install--modal--content">
+                    <div class="install--modal--content--header">
+                        <h1>Arts Printers Installation Help</h1>
+                    </div>
+                    <!--Choose an OS-->
+                    <h2>Select an Operating System</h2>
+                    <ul class="install--modal--content--osbar">
+                        <li><button id="install--windows">Windows
+                            <i class="fa fa-windows"></i>
+                        </button></li>
+                        <li><button id="install--mac">Mac OS
+                            <i class="fa fa-apple"></i>
+                        </button></li>
+                    </ul>
+                    <!--New Modal with relevant instructions-->
+                    <div class="install--modal--instructions">
+                        <div class="install--modal--instructions--windows">
+                            <ol>
+                                <h3>
+                                    <li>Find desired printer using search bar</li>
+                                    <li>Click on the printer and then button to copy the path</li>
+                                    <li>Press "Windows Key + R"</li>
+                                    <li>Paste path and click "Ok"</li>
+                                    <li>Authenticate using nexus\USER ID and WatIAM password</li>
+                                    <li id="windows--path"></li>
+                                    <button id="copy--win">Copy</button>
+                                </h3>
+                            </ol> 
+                        </div>
+                        <div class="install--modal--instructions--macos">
+                            <ol>
+                                <h3>
+                                    <li>Find desired printer using search bar</li>
+                                    <li>Click on the printer and then button to copy the path</li>
+                                    <li>Download the appropriate driver from the<a href="https://www.support.xerox.com/engb.html" target="_blank">Xerox Website</a>, if unsure check printer's model from table</li>
+                                    <li>Run the installer, you will be prompted for an admin passsword</li>
+                                    <li>When it is looking for a printer just hit continue</li>
+                                    <li>Use "Command Key + Space" to bring up Spotlight Search. Type "Printers and Scanners" and press "return" on the keyboard</li>
+                                    <li>Click the + button to add. If the "Advanced" icon is not there, right click on the menu bar and drag it across</li>
+                                    <li>Click "Advanced". Change the type to "Windows printer via spoolss"</li>
+                                    <li>Paste the path into the URL field</li>
+                                    <li>Click on "Use" and select the appropriate driver</li>
+                                    <li>Click "Add" and then configure features of the device</li>
+                                    <li>Click "Ok" and the printer should be added. You may need to authenticate with your WatIAM credentials</li>
+                                    <li id="macos--path"></li>
+                                    <button id="copy--mac">Copy</button>
+                                </h3>
+                            </ol> 
+                        </div>
+                    </div>
+                <span id="close">&times;</span>
+                </div>
+            </div>
+            </ul>
+    </nav>
+       <!--SEARCH BAR-->
+    <form>
+        <input type="text" id="search_input" placeholder="Search for printers...">
+        <label for="search_input">Search for printers</label>
+        <button onclick="jumptoTop()" id="btp">Top</button>	
+    </form>
+	</body>
